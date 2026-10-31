@@ -1,0 +1,230 @@
+component EPC2218
+% EPC2218
+% Component automatically generated from a SPICE netlist for subcircuit EPC2218.
+%   MATLAB version: 25.2.
+%   Simscape Electrical version: 25.2.
+%   Simscape code generated on: 28-Oct-2026 16:37:47
+%
+% The subcircuit2ssc function does not support these SPICE parameters:
+%    C_GD: 0
+%    C_GD: tc 0
+%    C_GS: 0
+%    C_GS: tc 0
+%    C_SD: 0
+%    C_SD: tc 0
+% If possible, you have to manually implement them to achieve complete
+% functionality. Refer to the documentation page of the blocks relevant to
+% your conversion inside the Simscape Electrical Additional Components
+% library.
+
+
+    nodes
+        drainin = foundation.electrical.electrical; % drainin
+        gatein = foundation.electrical.electrical; % gatein
+        sourcein = foundation.electrical.electrical; % sourcein
+    end
+
+    nodes(Access=protected, ExternalAccess=none)
+        drain = foundation.electrical.electrical;
+        source = foundation.electrical.electrical;
+        gate = foundation.electrical.electrical;
+    end
+
+    annotations
+        UILayout = [
+            UIGroup('Main', ...
+                    temp)
+            UIGroup('Parasitic elements', ...
+                    specifyParasiticValues, capacitorSeriesResistance)
+            UIGroup('Smoothing functions', ...
+                    specifySmoothValues, aWarning, expXh, expXl, logX0)
+                   ]
+    end
+
+    parameters
+        temp = {27, '1'};
+    end
+
+    parameters
+        specifyParasiticValues = ee.enum.include.no;    % Specify parasitic values
+    end
+
+    parameters(ExternalAccess=none)
+        capacitorSeriesResistance = {0, 'Ohm'};    % Capacitor parasitic series resistance
+    end
+
+    if specifyParasiticValues == ee.enum.include.yes
+        annotations
+            [capacitorSeriesResistance] : ExternalAccess=modify;
+        end
+    end
+
+    parameters
+        specifySmoothValues = ee.enum.include.no;    % Specify function smooth parameters
+    end
+
+    parameters(ExternalAccess=none)
+        aWarning = ee.enum.include.no;    % Include warning
+        expXh = {Inf, '1'};    % Upper boundary of linear extrapolation for exp(x), typical x=80
+        expXl = {-Inf, '1'};    % Lower boundary of linear extrapolation for exp(x), typical x=-80
+        logX0 = {0, '1'};    % Boundary value of linear extrapolation for log(x) and log10(x), typical x=exp(-80)
+    end
+
+    if specifySmoothValues == ee.enum.include.yes
+        annotations
+            [aWarning, expXh, expXl, logX0] : ExternalAccess=modify;
+        end
+    end
+
+    parameters(Access=private,ExternalAccess=none)
+        si = awg*7.500e-04;
+        so = awg*3.900e-03;
+        sr = awg;
+        awg = wg*1e-3;
+        wg = {1.545e+06, '1'};
+        a1 = 4.555e-02*awg;
+        k2 = {1.824, '1'};
+        k3 = {0.09, '1'};
+        rpara = {0.001975, '1'};
+        rpara_s_factor = {0.3229, '1'};
+        aitc = {0.003, '1'};
+        artc = {-0.0075, '1'};
+        k2tc = {0.0006, '1'};
+        x0_0 = {6.137, '1'};
+        x0_0_tc = {-0.002, '1'};
+        x0_1 = {-0.2623, '1'};
+        x0_1_tc = {0, '1'};
+        dgs1 = {4.3e-07, '1'};
+        dgs2 = {2.6e-13, '1'};
+        dgs3 = {0.8, '1'};
+        dgs4 = {0.23, '1'};
+        ags1 = 1.023e-09*si;
+        ags2 = 5.465e-10*si;
+        ags3 = {1.604, '1'};
+        ags4 = {0.1861, '1'};
+        ags5 = 1.732e-10*si;
+        ags6 = {74.8, '1'};
+        ags7 = {10.55, '1'};
+        agd1 = 1.942e-15*sr;
+        agd2 = 1.178e-13*sr;
+        agd3 = {-5, '1'};
+        agd4 = {4.314, '1'};
+        agd5 = 7.786e-15*sr;
+        agd6 = {-17.26, '1'};
+        agd7 = {15.29, '1'};
+        agd8 = 1.742e-15*sr;
+        agd9 = {-33.26, '1'};
+        agd10 = {0.89, '1'};
+        asd1 = 8.330e-11*so;
+        asd2 = 4.297e-11*so;
+        asd3 = {-14.35, '1'};
+        asd4 = {1.287, '1'};
+        asd5 = 1.155e-10*so;
+        asd6 = {-20.14, '1'};
+        asd7 = {9.467, '1'};
+        asd8 = 4.647e-12*so;
+        asd9 = {-81.25, '1'};
+        asd10 = {5.665, '1'};
+        rg_value = {0.4, '1'};
+    end
+
+    variables
+        BSWITCH = {value={0,'A'},priority=priority.none};
+        BGSDIODE = {value={0,'A'},priority=priority.none};
+        BGDDIODE = {value={0,'A'},priority=priority.none};
+        I_CGS1 = {value={0,'A'},priority=priority.none};
+        I_CGD1 = {value={0,'A'},priority=priority.none};
+        I_CSD1 = {value={0,'A'},priority=priority.none};
+        vgs = {value={0,'V'},priority=priority.none};
+        vgd = {value={0,'V'},priority=priority.none};
+        vsd = {value={0,'V'},priority=priority.none};
+    end
+
+    components(ExternalAccess=observe)
+        RD = foundation.electrical.elements.resistor(R={((1-rpara_s_factor)*rpara*(1-artc*(temp-25))),'Ohm'});
+        RS = foundation.electrical.elements.resistor(R={(rpara_s_factor*rpara*(1-artc*(temp-25))),'Ohm'});
+        RG = foundation.electrical.elements.resistor(R={(rg_value),'Ohm'});
+        RCSDCONV = foundation.electrical.elements.resistor(R={(100000*1e6)/awg,'Ohm'});
+        RCGSCONV = foundation.electrical.elements.resistor(R={(100000*1e6)/awg,'Ohm'});
+        RCGDCONV = foundation.electrical.elements.resistor(R={(100000*1e6)/awg,'Ohm'});
+        C_GS = foundation.electrical.elements.capacitor(c={ags1,'F'},r=capacitorSeriesResistance,g={0,'1/Ohm'}, ...
+            vc.priority=priority.none);
+        C_GD = foundation.electrical.elements.capacitor(c={agd1,'F'},r=capacitorSeriesResistance,g={0,'1/Ohm'}, ...
+            vc.priority=priority.none);
+        C_SD = foundation.electrical.elements.capacitor(c={asd1,'F'},r=capacitorSeriesResistance,g={0,'1/Ohm'}, ...
+            vc.priority=priority.none);
+    end
+
+    connections
+        connect(RD.p,drainin);
+        connect(RD.n,drain);
+        connect(RS.p,sourcein);
+        connect(RS.n,source);
+        connect(RG.p,gatein);
+        connect(RG.n,gate);
+        connect(RCSDCONV.p,drain);
+        connect(RCSDCONV.n,source);
+        connect(RCGSCONV.p,gate);
+        connect(RCGSCONV.n,source);
+        connect(RCGDCONV.p,gate);
+        connect(RCGDCONV.n,drain);
+        connect(C_GS.p,gate);
+        connect(C_GS.n,source);
+        connect(C_GD.p,gate);
+        connect(C_GD.n,drain);
+        connect(C_SD.p,source);
+        connect(C_SD.n,drain);
+    end
+
+    branches
+        BSWITCH: drain.i -> source.i;
+        BGSDIODE: gate.i -> source.i;
+        BGDDIODE: gate.i -> drain.i;
+        I_CGS1: gate.i -> source.i;
+        I_CGD1: gate.i -> drain.i;
+        I_CSD1: source.i -> drain.i;
+    end
+
+    equations
+        value(BSWITCH,'A') == (if value(drain.v-source.v,'V')>0, (a1*(1-aitc*(temp-25))*simscape.function.logm( ...
+            1.0+simscape.function.expm((value(gate.v-source.v,'V')-(k2*(1-k2tc*(temp-25))))/k3, expXl, expXh, aWarning),  ...
+            logX0, aWarning)* value(drain.v-source.v,'V')/(1 + (x0_0*(1-x0_0_tc*(temp-25))+x0_1*(1-x0_1_tc*(temp-25))*value( ...
+            gate.v-source.v,'V'))*value(drain.v-source.v,'V'))) else (-a1*(1-aitc*(temp-25))*simscape.function.logm( ...
+            1.0+simscape.function.expm((value(gate.v-drain.v,'V')-(k2*(1-k2tc*(temp-25))))/k3, expXl, expXh, aWarning),  ...
+            logX0, aWarning)* value(source.v-drain.v,'V')/(1 + (x0_0*(1-x0_0_tc*(temp-25))+x0_1*(1-x0_1_tc*(temp-25))*value( ...
+            gate.v-drain.v,'V'))*value(source.v-drain.v,'V'))) end);
+        value(BGSDIODE,'A') == (if value(gate.v-source.v,'V')>10, (0.125*awg/1077*(dgs1*(simscape.function.expm(( ...
+            10.0)/dgs3, expXl, expXh, aWarning)-1)+dgs2*(simscape.function.expm((10.0)/dgs4, expXl, expXh, aWarning)-1)))  ...
+            else (0.125*awg/1077*(dgs1*(simscape.function.expm((value(gate.v-source.v,'V'))/dgs3, expXl, expXh, aWarning)-1)+dgs2*( ...
+            simscape.function.expm((value(gate.v-source.v,'V'))/dgs4, expXl, expXh, aWarning)-1))) end);
+        value(BGDDIODE,'A') == (if value(gate.v-drain.v,'V')>10, (0.125*awg/1077*(dgs1*(simscape.function.expm(( ...
+            10.0)/dgs3, expXl, expXh, aWarning)-1)+dgs2*(simscape.function.expm((10.0)/dgs4, expXl, expXh, aWarning)-1)))  ...
+            else (0.125*awg/1077*(dgs1*(simscape.function.expm((value(gate.v-drain.v,'V'))/dgs3, expXl, expXh, aWarning)-1)+dgs2*( ...
+            simscape.function.expm((value(gate.v-drain.v,'V'))/dgs4, expXl, expXh, aWarning)-1))) end);
+        vgs == gate.v-source.v;
+        vgd == gate.v-drain.v;
+        vsd == source.v-drain.v;
+        value(I_CGS1,'A') == ...
+            0.5*value(ags2,'1')/(1+simscape.function.expm(-(value(vgs,'V')-value(ags3,'1'))/value(ags4,'1'), ...
+                expXl, expXh, aWarning))*value(vgs.der,'V/s') + ...
+            value(ags5,'1')/(1+simscape.function.expm(-(value(vsd,'V')-value(ags6,'1'))/value(ags7,'1'), ...
+                expXl, expXh, aWarning))*value(vsd.der,'V/s');
+        value(I_CGD1,'A') == (...
+            0.5*value(ags2,'1')/(1+simscape.function.expm(-(value(vgd,'V')-value(ags3,'1'))/value(ags4,'1'), ...
+                expXl, expXh, aWarning)) + ...
+            value(agd2,'1')/(1+simscape.function.expm(-(value(vgd,'V')-value(agd3,'1'))/value(agd4,'1'), ...
+                expXl, expXh, aWarning)) + ...
+            value(agd5,'1')/(1+simscape.function.expm(-(value(vgd,'V')-value(agd6,'1'))/value(agd7,'1'), ...
+                expXl, expXh, aWarning)) + ...
+            value(agd8,'1')/(1+simscape.function.expm(-(value(vgd,'V')-value(agd9,'1'))/value(agd10,'1'), ...
+                expXl, expXh, aWarning)))*value(vgd.der,'V/s');
+        value(I_CSD1,'A') == (...
+            value(asd2,'1')/(1+simscape.function.expm(-(value(vsd,'V')-value(asd3,'1'))/value(asd4,'1'), ...
+                expXl, expXh, aWarning)) + ...
+            value(asd5,'1')/(1+simscape.function.expm(-(value(vsd,'V')-value(asd6,'1'))/value(asd7,'1'), ...
+                expXl, expXh, aWarning)) + ...
+            value(asd8,'1')/(1+simscape.function.expm(-(value(vsd,'V')-value(asd9,'1'))/value(asd10,'1'), ...
+                expXl, expXh, aWarning)))*value(vsd.der,'V/s');
+    end
+
+end

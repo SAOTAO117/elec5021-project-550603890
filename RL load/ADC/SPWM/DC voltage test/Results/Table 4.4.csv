@@ -1,0 +1,4 @@
+﻿Case,Phase RMS V,Phase RMS mA,Current THD %,Settling s,Overshoot %
+60 V,8.629,8.913,1.229,0.26,11.99
+54 V,8.642,8.919,1.607,0.26,11.66
+66 V,8.629,8.912,1.261,0.22,15.80

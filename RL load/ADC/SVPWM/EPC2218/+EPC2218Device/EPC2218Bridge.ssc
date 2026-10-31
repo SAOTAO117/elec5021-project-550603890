@@ -1,0 +1,93 @@
+component EPC2218Bridge
+% EPC2218 three-phase bridge
+% Six EPC2218 enhancement-mode GaN transistors in a two-level bridge.
+% Gate vector order is [A high, A low, B high, B low, C high, C low].
+
+    inputs
+        G = {zeros(6,1), '1'}; % G:left
+    end
+
+    nodes
+        a = foundation.electrical.electrical; % a:left
+        b = foundation.electrical.electrical; % b:left
+        c = foundation.electrical.electrical; % c:left
+        p = foundation.electrical.electrical; % +:right
+        n = foundation.electrical.electrical; % -:right
+    end
+
+    components(ExternalAccess=observe)
+        Q1 = EPC2218Device.EPC2218;
+        Q4 = EPC2218Device.EPC2218;
+        Q2 = EPC2218Device.EPC2218;
+        Q5 = EPC2218Device.EPC2218;
+        Q3 = EPC2218Device.EPC2218;
+        Q6 = EPC2218Device.EPC2218;
+
+        Select1 = foundation.signal.nonlinear.selector(ix=1);
+        Select2 = foundation.signal.nonlinear.selector(ix=2);
+        Select3 = foundation.signal.nonlinear.selector(ix=3);
+        Select4 = foundation.signal.nonlinear.selector(ix=4);
+        Select5 = foundation.signal.nonlinear.selector(ix=5);
+        Select6 = foundation.signal.nonlinear.selector(ix=6);
+
+        Gain1 = foundation.signal.functions.gain(gain={5,'V'});
+        Gain2 = foundation.signal.functions.gain(gain={5,'V'});
+        Gain3 = foundation.signal.functions.gain(gain={5,'V'});
+        Gain4 = foundation.signal.functions.gain(gain={5,'V'});
+        Gain5 = foundation.signal.functions.gain(gain={5,'V'});
+        Gain6 = foundation.signal.functions.gain(gain={5,'V'});
+
+        Gate1 = foundation.electrical.sources.controlled_voltage;
+        Gate4 = foundation.electrical.sources.controlled_voltage;
+        Gate2 = foundation.electrical.sources.controlled_voltage;
+        Gate5 = foundation.electrical.sources.controlled_voltage;
+        Gate3 = foundation.electrical.sources.controlled_voltage;
+        Gate6 = foundation.electrical.sources.controlled_voltage;
+    end
+
+    connections
+        connect(G, Select1.I, Select2.I, Select3.I, Select4.I, Select5.I, Select6.I);
+        connect(Select1.O, Gain1.I);
+        connect(Select2.O, Gain2.I);
+        connect(Select3.O, Gain3.I);
+        connect(Select4.O, Gain4.I);
+        connect(Select5.O, Gain5.I);
+        connect(Select6.O, Gain6.I);
+
+        connect(Gain1.O, Gate1.vT);
+        connect(Gain2.O, Gate4.vT);
+        connect(Gain3.O, Gate2.vT);
+        connect(Gain4.O, Gate5.vT);
+        connect(Gain5.O, Gate3.vT);
+        connect(Gain6.O, Gate6.vT);
+
+        connect(Gate1.p, Q1.gatein);
+        connect(Gate1.n, Q1.sourcein);
+        connect(Gate4.p, Q4.gatein);
+        connect(Gate4.n, Q4.sourcein);
+        connect(Gate2.p, Q2.gatein);
+        connect(Gate2.n, Q2.sourcein);
+        connect(Gate5.p, Q5.gatein);
+        connect(Gate5.n, Q5.sourcein);
+        connect(Gate3.p, Q3.gatein);
+        connect(Gate3.n, Q3.sourcein);
+        connect(Gate6.p, Q6.gatein);
+        connect(Gate6.n, Q6.sourcein);
+
+        connect(Q1.drainin, p);
+        connect(Q1.sourcein, a);
+        connect(Q4.drainin, a);
+        connect(Q4.sourcein, n);
+
+        connect(Q2.drainin, p);
+        connect(Q2.sourcein, b);
+        connect(Q5.drainin, b);
+        connect(Q5.sourcein, n);
+
+        connect(Q3.drainin, p);
+        connect(Q3.sourcein, c);
+        connect(Q6.drainin, c);
+        connect(Q6.sourcein, n);
+    end
+
+end

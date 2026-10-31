@@ -1,0 +1,9 @@
+﻿Quantity,SVPWM
+Cycle-mean settling time (s),0.05
+Cycle-mean overshoot (%),2.884
+Mean d-axis current (p.u.),0.125963
+Mean d-axis error (%),−0.0293
+d-axis standard deviation (p.u.),0.006692
+Mean q-axis current (p.u.),−0.0000330
+Phase-current RMS (mA),8.912
+Line-voltage RMS (V),14.933

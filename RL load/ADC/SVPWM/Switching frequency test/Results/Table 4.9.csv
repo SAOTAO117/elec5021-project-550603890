@@ -1,0 +1,4 @@
+﻿Configuration,Current RMS mA,Voltage THD %,Current THD %,Ripple p-p µA,Ripple RMS µA
+SVPWM 6 kHz,5.375,1.468,0.420,129.5,27.6
+SVPWM 10 kHz,5.373,1.921,0.534,130.7,30.2
+SVPWM 20 kHz,5.373,3.382,0.934,213.1,52.1
