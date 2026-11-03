@@ -4,4 +4,6 @@ MATLAB/Simulink models, control code and results from the thesis. The models dev
 
 `Voltage control` and `Current control` contain the development models and their tests. `RL load` contains the 60 V models, with ADC tests and GaN calculations under `ADC`. `F28379D_Slow_Iteration` contains the embedded control files, LabVolt measurements and five hardware iterations. The laboratory power stage uses IGBTs; the GaN results are simulations and loss estimates.
 
+The shared EPC2218 device library and calculation code are in `RL load/ADC/EPC2218`. Each modulation folder retains its own inverter model, replay inputs and results.
+
 Saved figures and tables use the numbering in the thesis.

@@ -1,9 +1,0 @@
-﻿Measure,Voltage loop,Current loop
-Voltage RMS (p.u.),0.614395,0.282866
-Voltage fundamental RMS (p.u.),0.614374,0.282865
-Current RMS (p.u.),1.535987,0.707164
-Current fundamental RMS (p.u.),1.535935,0.707162
-Voltage/current THD40 (%),0.822,0.151
-Fitted frequency (Hz),48.3732,49.7501
-Regulated d-axis error (p.u.),0.131109,−1.41 × 10⁻⁵
-Regulated q-axis error (p.u.),3.06 × 10⁻⁶,−2.02 × 10⁻⁶

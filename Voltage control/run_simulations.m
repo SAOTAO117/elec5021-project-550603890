@@ -1,7 +1,7 @@
 function run_simulations(selected)
 %RUN_SIMULATIONS Run the saved test configurations without changing parameters.
 root = fileparts(mfilename('fullpath'));
-models = {'DevelopmentVoltage.slx'};
+models = {'invertervoltage.slx'};
 if nargin > 0
     keep = false(size(models));
     for j = 1:numel(models)

@@ -4,16 +4,18 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parent
 R=ROOT/"output"
-OLD=ROOT/"Inputs"
+INPUTS=None
 
 def generate(method,dead,spacing,tag):
-    gate=np.loadtxt(OLD/(method+'_gates.csv'),delimiter=',')
-    curr=np.loadtxt(OLD/(method+'_bridge_current.csv'),delimiter=',')
+    if INPUTS is None:
+        raise ValueError("Use run_losses.py to select the modulation and replay inputs.")
+    gate=np.loadtxt(INPUTS/(method+'_gates.csv'),delimiter=',')
+    curr=np.loadtxt(INPUTS/(method+'_bridge_current.csv'),delimiter=',')
     duration=.02;pre=50e-6;end=duration+pre
     ix=np.arange(0,len(curr),int(round(spacing/.5e-6)))
     if ix[-1]!=len(curr)-1:ix=np.r_[ix,len(curr)-1]
     curr=curr[ix]
-    lines=[f'EPC2218 device replay {tag}', '.include EPC2218V5.net','.temp 27','.options reltol=1e-4 abstol=1e-9 vntol=1e-7 method=gear maxord=2 klu','Vdc bus 0 60']
+    lines=[f'EPC2218 device replay {tag}', '.include EPC2218Scaled.net','.temp 27','.options reltol=1e-4 abstol=1e-9 vntol=1e-7 method=gear maxord=2 klu','Vdc bus 0 60']
     def pwl(name,pos,neg,points):
         points=sorted({round(t,14):v for t,v in points if -1e-13<=t<=end+1e-13}.items())
         lines.append(f'{name} {pos} {neg} PWL(')
@@ -61,7 +63,7 @@ def generate(method,dead,spacing,tag):
     for j in range(1,7):save += [f'v(xq{j}.{n})' for n in ['drain','source','gate']]+[f'v(g{j})',f'i(vg{j})',f'@b.xq{j}.bswitch[i]']
     # Same operating-point initial guess used by the completed baseline replay.
     if method=='SVPWM':
-        lines.extend(x for x in (OLD/'nodeset.sp').read_text().splitlines() if x.startswith('.nodeset'))
+        lines.extend(x for x in (INPUTS/'nodeset.sp').read_text().splitlines() if x.startswith('.nodeset'))
     lines+=['.save '+' '.join(save),f'.tran 0.5u {end:.12g} 0 0.5u','.end']
     (R/(tag+'.cir')).write_text('\n'.join(lines)+'\n')
     (R/(tag+'.json')).write_text(json.dumps({'method':method,'deadtime':dead,'current_spacing':spacing,'events':events}))
