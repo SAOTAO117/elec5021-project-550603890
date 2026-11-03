@@ -1,0 +1,10 @@
+*.slxc
+slprj/
+*_ert_rtw/
+__pycache__/
+*.pyc
+*.raw
+*.log
+*.mat
+output/
+State/

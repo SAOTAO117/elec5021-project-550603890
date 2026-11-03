@@ -1,7 +1,7 @@
 # Digital Control of DC-to-Three-Phase AC Conversion Based on GaN Power Devices
 
-The thesis develops voltage and dq current control for a three-phase inverter using SPWM and SVPWM in MATLAB/Simulink. The models include RL loads, ADC sampling and quantisation, and discrete PI control. EPC2218 GaN device models are used to calculate conduction and switching losses and estimate conversion efficiency.
+MATLAB/Simulink models, control code and results from the thesis. The models develop the MathWorks [Three-Phase Inverter Voltage Control example](https://www.mathworks.com/help/simscape-electrical/ug/three-phase-inverter-control.html) into voltage and current controllers, SPWM and SVPWM operation, and an RL-load system with sampled feedback. EPC2218 models are used for inverter simulation and device-loss calculations.
 
-Hardware tests use a TMS320F28379D controller and a LabVolt IGBT bridge. Recorded voltage and current measurements are used to update the PWM sequence between runs.
+`Voltage control` and `Current control` contain the development models and their tests. `RL load` contains the 60 V models, with ADC tests and GaN calculations under `ADC`. `F28379D_Slow_Iteration` contains the embedded control files, LabVolt measurements and five hardware iterations. The laboratory power stage uses IGBTs; the GaN results are simulations and loss estimates.
 
-Models and saved results are organised into `Voltage control`, `Current control` and `RL load`, with ADC tests and GaN models under `RL load/ADC`. Hardware files are in `F28379D_Slow_Iteration`.
+Saved figures and tables use the numbering in the thesis.
