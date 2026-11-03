@@ -1,0 +1,7 @@
+﻿Check,SPWM,SVPWM
+Integration time at each tolerance (ms),20,20
+Total loss at 10⁻⁴ (mW),168.576,403.483
+Total loss at 3 × 10⁻⁵ (mW),168.519,403.424
+Change in total loss (%),−0.0342,−0.0145
+Energy residual at 3 × 10⁻⁵ (%),0.0440,0.0141
+"Switching loss, 25–100 ns (mW)",146.8–147.0,188.9–200.5

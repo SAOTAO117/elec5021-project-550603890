@@ -1,0 +1,10 @@
+﻿Quantity,SPWM,SVPWM
+Final voltage RMS (V),8.304,6.215
+Final V1 RMS (V),8.281,6.214
+Final current RMS (mA),8.927,8.929
+Final I1 RMS (mA),8.925,8.929
+Final current THD40 (%),2.069,0.465
+Mean ed (%),−0.1304,−0.1654
+Mean eq (µA),4.35,−51.91
+Maximum deviation (%),19.095,10.815
+Recovery after connection (s),0.22,0.14

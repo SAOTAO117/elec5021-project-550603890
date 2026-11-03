@@ -1,0 +1,212 @@
+{
+  "SPWM_Nominal": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.1685763481760578,
+    "gate_path_leakage_W": 0.010434595566257884,
+    "gate_source_W": 0.010386893349900833,
+    "dc_source_W": 0.6808685396638419,
+    "current_source_W": 0.5224780388677139,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.2117925371062834e-07,
+    "balance_residual_W": 0.00020710493265653463,
+    "balance_residual_pct_loss": 0.12285527293558308,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.00014303815456412447,
+        "reverse_W": 0.01124342453255296,
+        "switching_W": 0.1467505611674518,
+        "off_W": 4.728755231002972e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.0001428723329258065,
+        "reverse_W": 0.011187219774914308,
+        "switching_W": 0.14680701760483922,
+        "off_W": 4.642897120557651e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.00014254135816966923,
+        "reverse_W": 0.01102059928996264,
+        "switching_W": 0.14697413797170591,
+        "off_W": 4.47398996168843e-06
+      }
+    ]
+  },
+  "SPWM_Strict": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.16851866575434296,
+    "gate_path_leakage_W": 0.010434054272312565,
+    "gate_source_W": 0.010391379237192043,
+    "dc_source_W": 0.6806771512219948,
+    "current_source_W": 0.5224776988550792,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -3.907801386681472e-08,
+    "balance_residual_W": 7.41197504580567e-05,
+    "balance_residual_pct_loss": 0.04398311019510699,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.00014282749945346464,
+        "reverse_W": 0.011245151522661126,
+        "switching_W": 0.1466919703983312,
+        "off_W": 4.662061584611065e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.00014266167594884852,
+        "reverse_W": 0.011188846860659622,
+        "switching_W": 0.14674852674014177,
+        "off_W": 4.576205280156e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.0001423307011079875,
+        "reverse_W": 0.011022195707913468,
+        "switching_W": 0.1469156777225428,
+        "off_W": 4.40735046616098e-06
+      }
+    ]
+  },
+  "SPWM_Deadtime05": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 0.5,
+    "current_spacing_us": 0.5,
+    "device_W": 0.19040742006385022,
+    "gate_path_leakage_W": 0.010613474738658675,
+    "gate_source_W": 0.01069146653227074,
+    "dc_source_W": 0.7544002758736609,
+    "current_source_W": 0.5744152379765735,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.3967450587531163e-07,
+    "balance_residual_W": 0.0002760680908016701,
+    "balance_residual_pct_loss": 0.14498809484897957,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.0001437326119285053,
+        "reverse_W": 0.002507880000385961,
+        "switching_W": 0.1771377902802626,
+        "off_W": 4.5424326144830416e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.00014356217348068912,
+        "reverse_W": 0.0024516745693296525,
+        "switching_W": 0.17719425200788208,
+        "off_W": 4.456574499134395e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.00014322199721294025,
+        "reverse_W": 0.0022850540803899186,
+        "switching_W": 0.17736138158009865,
+        "off_W": 4.287667490051382e-06
+      }
+    ]
+  },
+  "SPWM_Deadtime20": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 2.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.17619962551312982,
+    "gate_path_leakage_W": 0.010181985389464196,
+    "gate_source_W": 0.010062628388123438,
+    "dc_source_W": 0.5219680008745198,
+    "current_source_W": 0.355680954881605,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.2359698925420754e-07,
+    "balance_residual_W": 0.00015622871737105265,
+    "balance_residual_pct_loss": 0.08866574881534638,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.00013745474078685654,
+        "reverse_W": 0.031619776400207966,
+        "switching_W": 0.1342556294277189,
+        "off_W": 4.779554951916093e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.00013729752446469458,
+        "reverse_W": 0.03156357044968419,
+        "switching_W": 0.1343120784526164,
+        "off_W": 4.693696900335188e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.0001369836979961199,
+        "reverse_W": 0.03139695024142705,
+        "switching_W": 0.13447918139454387,
+        "off_W": 4.524789698568782e-06
+      }
+    ]
+  },
+  "SPWM_Current1us": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 1.0,
+    "device_W": 0.16918984528236355,
+    "gate_path_leakage_W": 0.010434949529158086,
+    "gate_source_W": 0.0103879281362092,
+    "dc_source_W": 0.6787238267334165,
+    "current_source_W": 0.5197162819716201,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.1768595492291972e-07,
+    "balance_residual_W": 0.00021151191338828038,
+    "balance_residual_pct_loss": 0.12501454389019911,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.0001429791648158879,
+        "reverse_W": 0.011289700381098493,
+        "switching_W": 0.14731748424486418,
+        "off_W": 4.731962426933451e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.00014281334324279884,
+        "reverse_W": 0.011233333010171747,
+        "switching_W": 0.1473741030817414,
+        "off_W": 4.6463180495207334e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.00014248236862265089,
+        "reverse_W": 0.011066002411619685,
+        "switching_W": 0.14754193317074932,
+        "off_W": 4.477802213804165e-06
+      }
+    ]
+  }
+}

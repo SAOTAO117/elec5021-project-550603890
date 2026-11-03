@@ -1,0 +1,12 @@
+﻿Measure,SPWMOriginal,SPWM12-bit,SVPWMOriginal,SVPWM12-bit
+Current RMS (mA),8.921,8.921,8.914,8.914
+Current fundamental RMS (mA),8.920,8.920,8.910,8.910
+Line-voltage RMS (V),14.953,14.955,14.994,14.995
+Line-voltage fundamental RMS (V),14.936,14.938,14.922,14.923
+Current THD40 (%),1.260,1.255,2.623,2.615
+Line-voltage THD40 (%),4.697,4.698,9.736,9.719
+Mean d-axis error (p.u.),−4.31 × 10⁻⁶,−1.23 × 10⁻⁵,−2.31 × 10⁻⁵,−2.43 × 10⁻⁵
+Mean q-axis error (p.u.),1.92 × 10⁻⁵,−8.68 × 10⁻⁶,−4.05 × 10⁻⁵,−4.45 × 10⁻⁵
+Rise time (s),0.06,0.06,0.10,0.10
+Settling time (s),0.26,0.26,0.36,0.36
+Overshoot (%),10.732,10.642,11.937,12.156

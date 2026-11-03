@@ -1,0 +1,9 @@
+﻿Measure,10 kHz,20 kHz,40 kHz
+Phase-A current RMS (mA),8.915,8.914,8.951
+Phase-A I1 RMS (mA),8.914,8.910,8.946
+Current THD40 (%),1.435,2.623,2.763
+Mean ed (%),−0.0374,−0.0183,−0.0596
+Mean eq (µA),−1.81,−4.05,0.91
+Rise time (s),0.08,0.10,0.10
+Settling time (s),0.26,0.36,0.30
+Overshoot (%),8.32,11.94,12.42

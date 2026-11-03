@@ -1,7 +1,0 @@
-﻿Quantity,SPWM
-Phase-A voltage RMS before / after (V),8.583 / 6.904
-Phase-A current RMS before / after (mA),8.878 / 8.923
-Current RMS change (%),+0.504
-Cycle-mean settling time (s),0.20
-Maximum cycle-mean deviation (%),18.791
-Post-disturbance current THD (%),0.703

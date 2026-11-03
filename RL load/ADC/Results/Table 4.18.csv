@@ -1,0 +1,6 @@
+﻿Loss component (mW),SPWM,SVPWM
+Gate-on conduction,0.14,13.90
+Dead-time reverse conduction,11.19,187.33
+Switching,146.81,191.82
+Gate-path and leakage,10.44,10.43
+Total semiconductor loss,168.58,403.48

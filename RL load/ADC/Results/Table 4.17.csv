@@ -1,0 +1,7 @@
+﻿Quantity,Setting
+Supply and switching frequency,60 V; 20 kHz
+Fundamental record,50 Hz; 0.50–0.52 s
+Gate drive and dead time,0/5 V; 1 µs
+Device temperature,"27 °C, fixed"
+SPWM / SVPWM shunt capacitance,80 / 700 µF
+Numerical method,"Adaptive Gear, order 2; relative tolerance 10⁻⁴"

@@ -1,0 +1,12 @@
+﻿Quantity,SPWM,SVPWM
+Rise time (s),0.06,0.02
+Settling time (s),0.26,0.06
+Overshoot (%),10.732,2.884
+Mean d-axis current (p.u.),0.125970,0.125963
+Mean d-axis error (%),+0.0242,+0.0293
+d-axis standard deviation (p.u.),0.006761,0.006692
+Mean q-axis error (p.u.),3.15 × 10⁻⁵,3.30 × 10⁻⁵
+Phase-current RMS (mA),8.913,8.912
+Current fundamental RMS (mA),8.912,8.912
+Line-voltage RMS (V),14.947,14.933
+Voltage fundamental RMS (V),14.930,14.929

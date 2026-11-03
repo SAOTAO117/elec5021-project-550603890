@@ -1,0 +1,212 @@
+{
+  "SVPWM_Nominal": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.4034827934836952,
+    "gate_path_leakage_W": 0.01042860458767198,
+    "gate_source_W": 0.01036410253459597,
+    "dc_source_W": 0.9050993578888902,
+    "current_source_W": 0.511820481108205,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.2023875691582739e-07,
+    "balance_residual_W": 0.00016619776943001664,
+    "balance_residual_pct_loss": 0.041190794778398085,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.013917679442585446,
+        "reverse_W": 0.19018372852977622,
+        "switching_W": 0.18894526075567292,
+        "off_W": 7.520167988643049e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.013903219615550447,
+        "reverse_W": 0.18732782635418224,
+        "switching_W": 0.1918181634999673,
+        "off_W": 4.979426323218447e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.013874300594996608,
+        "reverse_W": 0.17868676927923938,
+        "switching_W": 0.20048891789803192,
+        "off_W": 4.201123755352306e-06
+      }
+    ]
+  },
+  "SVPWM_Strict": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.4034241369414356,
+    "gate_path_leakage_W": 0.010427837214643855,
+    "gate_source_W": 0.010368587696443611,
+    "dc_source_W": 0.9049292046416842,
+    "current_source_W": 0.511819125810048,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -4.855261526698578e-08,
+    "balance_residual_W": 5.695721740977278e-05,
+    "balance_residual_pct_loss": 0.014118445624397818,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.013918020059825068,
+        "reverse_W": 0.19018495969248603,
+        "switching_W": 0.1888858241907595,
+        "off_W": 7.4957837211743245e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.013903560227415464,
+        "reverse_W": 0.18732866166274362,
+        "switching_W": 0.19175913227628538,
+        "off_W": 4.945560347306486e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.013874641205370667,
+        "reverse_W": 0.17868753978049653,
+        "switching_W": 0.20042995328989366,
+        "off_W": 4.165451030962739e-06
+      }
+    ]
+  },
+  "SVPWM_Deadtime05": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 0.5,
+    "current_spacing_us": 0.5,
+    "device_W": 0.3107490144112834,
+    "gate_path_leakage_W": 0.010554307630277331,
+    "gate_source_W": 0.010526478191982188,
+    "dc_source_W": 2.583788128032183,
+    "current_source_W": 2.2833829957883687,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.208185170097132e-07,
+    "balance_residual_W": 0.0001886369503638563,
+    "balance_residual_pct_loss": 0.060703957732973206,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.014205947828427375,
+        "reverse_W": 0.08930798934150987,
+        "switching_W": 0.1966733073772464,
+        "off_W": 7.462233822368627e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.014191483346784533,
+        "reverse_W": 0.08645208662167599,
+        "switching_W": 0.1995462153218795,
+        "off_W": 4.921490666033498e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.014162555048395458,
+        "reverse_W": 0.07781102564104625,
+        "switching_W": 0.20821698268218264,
+        "off_W": 4.143409381673846e-06
+      }
+    ]
+  },
+  "SVPWM_Deadtime20": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 2.0,
+    "current_spacing_us": 0.5,
+    "device_W": 0.6019217081078664,
+    "gate_path_leakage_W": 0.01021616194474302,
+    "gate_source_W": 0.010134284086854002,
+    "dc_source_W": -2.470970323794344,
+    "current_source_W": -3.062907524544044,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.1582309631661147e-07,
+    "balance_residual_W": 0.00015556788350570714,
+    "balance_residual_pct_loss": 0.02584520235941197,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.013339547931688508,
+        "reverse_W": 0.39277684496895526,
+        "switching_W": 0.1855816123179139,
+        "off_W": 7.5409445656839264e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.013325096787138509,
+        "reverse_W": 0.3899209414593011,
+        "switching_W": 0.18845450736919483,
+        "off_W": 5.000547488894557e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.013296195069141694,
+        "reverse_W": 0.3812798842285122,
+        "switching_W": 0.19712524460657554,
+        "off_W": 4.222258893879841e-06
+      }
+    ]
+  },
+  "SVPWM_Current1us": {
+    "complete": true,
+    "duration_s": 0.02,
+    "deadtime_us": 1.0,
+    "current_spacing_us": 1.0,
+    "device_W": 0.4036896892768038,
+    "gate_path_leakage_W": 0.010428688389229484,
+    "gate_source_W": 0.010364311292246232,
+    "dc_source_W": 0.9024792472142468,
+    "current_source_W": 0.508993754832708,
+    "overlap_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "charge_energy_J": -1.1899138168353926e-07,
+    "balance_residual_W": 0.00016606396606566918,
+    "balance_residual_pct_loss": 0.041136538900254566,
+    "splits": [
+      {
+        "window_ns": 25.0,
+        "on_W": 0.013917416345157193,
+        "reverse_W": 0.1902538422594871,
+        "switching_W": 0.18908223170128535,
+        "off_W": 7.51058164464875e-06
+      },
+      {
+        "window_ns": 50.0,
+        "on_W": 0.013902956519348121,
+        "reverse_W": 0.18739768590900133,
+        "switching_W": 0.1919553885481672,
+        "off_W": 4.969911057628535e-06
+      },
+      {
+        "window_ns": 100.0,
+        "on_W": 0.01387403750099345,
+        "reverse_W": 0.1787555816722267,
+        "switching_W": 0.20062718997262413,
+        "off_W": 4.191741730062482e-06
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+﻿Quantity,SPWM,SVPWM
+"Voltage RMS, before/after (V)",8.583 / 6.904,8.669 / 6.895
+"Current RMS, before/after (mA)",8.878 / 8.923,8.968 / 8.914
+Current RMS change (%),+0.508,−0.599
+Final V1 RMS (V),6.900,6.892
+Final I1 RMS (mA),8.922,8.913
+Final current THD40 (%),0.753,0.677
+Mean ed (%),−0.0384,0.0500
+Mean eq (µA),−10.02,1.27
+Settling time (s),0.20,0.10
+Maximum deviation (%),18.791,23.860

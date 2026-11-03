@@ -1,0 +1,3 @@
+﻿Model,PWM setting,Filter capacitance (uF)
+inverterRL60VSPWM.slx,SPWM: sinusoidal PWM,80
+inverterRL60VSVPWM.slx,SPWM: sinusoidal PWM,700

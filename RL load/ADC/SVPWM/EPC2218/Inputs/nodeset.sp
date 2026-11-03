@@ -1,0 +1,1 @@
+.nodeset V(a)=60 V(b)=60 V(c)=60 V(xq1.drain)=60 V(xq2.drain)=60 V(xq3.drain)=60 V(xq1.source)=60 V(xq2.source)=60 V(xq3.source)=60 V(xq1.gate)=65 V(xq2.gate)=65 V(xq3.gate)=65 V(xq4.drain)=60 V(xq5.drain)=60 V(xq6.drain)=60 V(xq4.source)=0 V(xq5.source)=0 V(xq6.source)=0 V(xq4.gate)=0 V(xq5.gate)=0 V(xq6.gate)=0

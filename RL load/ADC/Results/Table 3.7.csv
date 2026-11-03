@@ -1,0 +1,3 @@
+﻿Configuration,Line voltage RMS (V),Phase current RMS (mA),Mean id (p.u.),Mean iq (p.u.)
+SPWM 80 µF,8.979–8.988,5.358–5.362,0.075810,−0.000236
+SVPWM 700 µF,8.999–9.007,5.371–5.376,0.075997,8.00 × 10⁻⁶
