@@ -1,0 +1,7 @@
+﻿Measure,Upward step,Downward step
+Rise/fall time (ms),2.622,2.741
+Overshoot (%),5.128,4.573
+Settling time (ms),2.919,3.718
+Steady d-axis error (p.u.),7.67 × 10⁻⁶,1.96 × 10⁻⁵
+Steady q-axis error (p.u.),2.36 × 10⁻⁶,−1.02 × 10⁻⁵
+Peak |iq| after step (p.u.),0.04678,0.04417

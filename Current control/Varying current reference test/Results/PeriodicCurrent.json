@@ -1,0 +1,19 @@
+{
+  "duration_s": 0.5,
+  "window_s": [
+    0.24867258771281653,
+    0.5
+  ],
+  "modulation": "SVPWM",
+  "reference_Hz": 7.9577471545947667,
+  "d_error_mean_pu": -8.71769161942718E-6,
+  "d_error_rms_pu": 0.022399848758588147,
+  "d_error_peak_pu": 0.036084237893835414,
+  "q_error_mean_pu": 1.0849303049829057E-6,
+  "q_error_rms_pu": 0.02153004206107199,
+  "q_excursion_peak_pu": 0.0357382225059151,
+  "d_modulation_gain": 1.0032812421272284,
+  "d_phase_lag_degrees": 3.6087435647753647,
+  "q_modulation_amplitude_pu": 0.0303342181082642,
+  "elapsed_s": 17.8051334
+}
