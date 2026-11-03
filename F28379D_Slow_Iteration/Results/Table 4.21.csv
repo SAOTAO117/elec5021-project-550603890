@@ -1,0 +1,14 @@
+﻿Parameter,ADC simulation,Hardware
+DC supply; fundamental,60 V; prescribed 50 Hz,60 V; nominal 50 Hz
+Nominal load per phase,685.714 Ω; 2.173458 H,685.714 Ω; 2.173458 H
+Current base (phase peak),0.100 A,0.040 A
+d/q references,0.076 / 0 p.u.,0.253 / 0 p.u.
+Current reference (phase RMS),5.374 mA,7.156 mA
+PI gains Kp / Ki,0.2 / 64 s⁻¹,0.8 / 300 s⁻¹
+PI integration interval,50 µs,50 µs in batch calculation
+Acquisition rate,20 kHz sample-and-hold,2560 Hz
+PWM frequency; period,20 kHz; 50 µs,20 kHz; 50 µs local replay
+Dead time,1 µs,1.5 µs configured
+Angle generation,Fixed 50 Hz frame,PLL: Kp = 180; Ki = 3200
+Voltage phase-peak base,34.641 V,80 V in data processing
+Duty bounds,0.05–0.95,0.05–0.95; update limited to ±0.005
